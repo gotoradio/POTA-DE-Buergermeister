@@ -31,7 +31,7 @@ for park in stats:
                                 else:
                                     print(f'Stellvertretener Bürgermeister per Aktivierungen und QSOs in {park}')
                     else:
-                        print(f'Stellvertretener Bürgermeister per Aktivirungen in {park}')
+                        print(f'Stellvertretener Bürgermeister per Aktivierungen in {park}')
 
 
     if call in stats[park]['qsos'] and not call in stats[park]['activations']:
