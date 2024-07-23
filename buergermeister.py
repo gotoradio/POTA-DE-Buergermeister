@@ -2,7 +2,7 @@ import subprocess, json
 
 mayor = False
 
-stats = json.loads(subprocess.run(["curl", "file:///home/bou/AFU/draussenfunker/buergermeister/buergermeister.json"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True).stdout)
+stats = json.loads(subprocess.run(["curl", "https://raw.githubusercontent.com/gotoradio/POTA-DE-Buergermeister/main/buergermeister.json"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True).stdout)
 print(f'''Daten stand: {stats['date_UTC']} UTC''')
 stats = stats['data']
 call = input('Zu suchendes Rufzeichen: ')
