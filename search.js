@@ -13,7 +13,7 @@ function search(){
     }).then(function(stats){
 
         result.innerHTML = `Daten stand: ${stats['date_UTC']} UTC\n\n`;
-        const call = document.getElementById('callsignInput').value;
+        const call = document.getElementById('callsignInput').value.toUpperCase();
 
         stats = stats['data'];
 
@@ -70,7 +70,7 @@ function search(){
         }
 
         if (!mayor) {
-            result.innerHTML += 'Kein Bürgermeister Status. Ist das Rufzeichen großgeschrieben?\n';
+            result.innerHTML += 'Kein Bürgermeister Status in der Datenbank\n';
         }
     }).catch(function(error){
         result.innerHTML = `Etwas ist schiefgelaufen!`;

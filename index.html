@@ -1,18 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>POTA Bürgermeister Suche</title>
-    </head>
+<head>
+    <title>POTA Bürgermeister Suche</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-    <body>
-        <label>Rufzeichen: </label>
-        <input type="text" id="callsignInput">
-        <button id="button" onclick="search()">suchen</button>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
 
-        <pre id="result"></pre>
+        .band {
+            width: 100%;
+            background-color: #43a047; /* Dunkelgrünes Band */
+            padding: 6px 0; /* Höhe des Bands */
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1; /* Sicherstellen, dass das Band über dem Pre-Feld liegt */
+        }
 
-    </body>
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Abstand zwischen Eingabefeld und Button */
+        }
+
+        input[type="text"] {
+            font-size: 1em;
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 100%;
+            max-width: 300px; /* Maximale Breite des Eingabefeldes */
+            box-sizing: border-box;
+            border-radius: 0; /* Eckige Ecken */
+            height: 40px; /* Höhe des Textfeldes */
+        }
+
+        pre {
+            margin-top: 70px; /* Abstand für das Band und zusätzlicher Abstand */
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            height: calc(100vh - 80px); /* Höhe des Pre-Feldes: Ansichtshöhe minus Höhe des Bands plus zusätzlicher Abstand */
+            overflow-y: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="band">
+        <div class="container">
+            <input type="text" id="callsignInput" placeholder="Rufzeichen">
+        </div>
+    </div>
+
+    <pre id="result"></pre>
 
     <script src="search.js"></script>
-
+</body>
 </html>
