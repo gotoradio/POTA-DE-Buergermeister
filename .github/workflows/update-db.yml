@@ -3,6 +3,9 @@ name: update db
 on:
   workflow_dispatch
 
+  schedule:
+    - cron: "23 4 * * 1"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,9 +27,9 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -A
-          git commit -m "updates"
+          git commit -m "automatic DB Update"
 
-      - name: push changes
+      - name: push
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
