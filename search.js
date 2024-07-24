@@ -27,28 +27,28 @@ function search(){
                                 for (let j = 0; j < stats[park]['qsos'].length; j++) {
                                     if (stats[park]['qsos'][j] === call) {
                                         if (j === 0) {
-                                            result.innerHTML += `Bürgermeister per Aktivierungen und QSOs in ${park}\n`;
+                                            result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Bürgermeister per Aktivierungen und QSO's\n`;
                                         } else {
-                                            result.innerHTML += `Bürgermeister per Aktivierungen und Stellvertretener Bürgermeister per QSOs in ${park}\n`;
+                                            result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Bürgermeister per Aktivierungen und Stellvertretener Bürgermeister per QSO's\n`;
                                         }
                                     }
                                 }
                             } else {
-                                result.innerHTML += `Bürgermeister per Aktivierungen in ${park}\n`;
+                                result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Bürgermeister per Aktivierungen\n`;
                             }
                         } else {
                             if (stats[park]['qsos'].includes(call)) {
                                 for (let j = 0; j < stats[park]['qsos'].length; j++) {
                                     if (stats[park]['qsos'][j] === call) {
                                         if (j === 0) {
-                                            result.innerHTML += `Stellvertretener Bürgermeister per Aktivierungen und Bürgermeister per QSOs in ${park}\n`;
+                                            result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Stellvertretener Bürgermeister per Aktivierungen und Bürgermeister per QSO's\n`;
                                         } else {
-                                            result.innerHTML += `Stellvertretener Bürgermeister per Aktivierungen und QSOs in ${park}\n`;
+                                            result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Stellvertretener Bürgermeister per Aktivierungen und QSO's\n`;
                                         }
                                     }
                                 }
                             } else {
-                                result.innerHTML += `Stellvertretener Bürgermeister per Aktivierungen in ${park}\n`;
+                                result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Stellvertretener Bürgermeister per Aktivierungen\n`;
                             }
                         }
                     }
@@ -60,9 +60,9 @@ function search(){
                 for (let i = 0; i < stats[park]['qsos'].length; i++) {
                     if (stats[park]['qsos'][i] === call) {
                         if (i === 0) {
-                            result.innerHTML += `Bürgermeister per QSOs in ${park}\n`;
+                            result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Bürgermeister per QSO's\n`;
                         } else {
-                            result.innerHTML += `Stellvertretener Bürgermeister per QSOs in ${park}\n`;
+                            result.innerHTML += `<a href="https://pota.app/#/park/${park}">${park}</a>: Stellvertretener Bürgermeister per QSO's\n`;
                         }
                     }
                 }

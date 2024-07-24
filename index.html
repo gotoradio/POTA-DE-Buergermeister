@@ -20,20 +20,20 @@
 
         .band {
             width: 100%;
-            background-color: #43a047; /* Dunkelgrünes Band */
-            padding: 6px 0; /* Höhe des Bands */
+            background-color: #43a047;
+            padding: 6px 0;
             display: flex;
             justify-content: center;
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1; /* Sicherstellen, dass das Band über dem Pre-Feld liegt */
+            z-index: 1;
         }
 
         .container {
             display: flex;
             align-items: center;
-            gap: 10px; /* Abstand zwischen Eingabefeld und Button */
+            gap: 10px;
         }
 
         input[type="text"] {
@@ -41,21 +41,21 @@
             padding: 10px;
             border: 1px solid #ccc;
             width: 100%;
-            max-width: 300px; /* Maximale Breite des Eingabefeldes */
+            max-width: 300px;
             box-sizing: border-box;
-            border-radius: 0; /* Eckige Ecken */
-            height: 40px; /* Höhe des Textfeldes */
+            border-radius: 0;
+            height: 40px;
         }
 
         pre {
-            margin-top: 70px; /* Abstand für das Band und zusätzlicher Abstand */
+            margin-top: 70px;
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 8px;
             width: 100%;
-            max-width: 600px;
-            height: calc(100vh - 80px); /* Höhe des Pre-Feldes: Ansichtshöhe minus Höhe des Bands plus zusätzlicher Abstand */
+            max-width: 700px;
+            height: calc(100vh - 80px);
             overflow-y: auto;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
