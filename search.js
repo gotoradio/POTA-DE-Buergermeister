@@ -1,3 +1,10 @@
+const CallInput = document.getElementById('callsignInput');
+CallInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        search()
+    }
+});
+
 function search(){
     let mayor = false;
 
@@ -6,7 +13,7 @@ function search(){
     }).then(function(stats){
 
         result.innerHTML = `Daten stand: ${stats['date_UTC']} UTC\n\n`;
-        const call = document.getElementById('callsign_inp').value;
+        const call = document.getElementById('callsignInput').value;
 
         stats = stats['data'];
 
